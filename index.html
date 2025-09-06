@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -10,12 +11,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     
-    <!-- Custom Fonts (if not already defined in your global CSS setup) -->
+    <!-- Custom Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+    <!-- Preload for example iframe images (adjust as needed for your actual images) -->
+    <link rel="preload" href="images/uae-bg.jpg" as="image">
+    <link rel="preload" href="images/solar.jpg" as="image">
 
     <!-- Custom Styles -->
     <style>
-        /* @import statements and global resets should ideally be in a separate CSS file */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap');
         * {
             margin: 0;
@@ -239,7 +243,7 @@
 
         .card-hover:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
         }
 
         .typing-indicator {
@@ -507,7 +511,7 @@
         /* Hero section with background image */
         .hero-bg {
             background-image: linear-gradient(to right, rgba(15, 23, 42, 0.9), rgba(88, 28, 135, 0.7)), 
-                            url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80'); /* Placeholder image for AI/Tech background */
+                            ('images/hero-bg.jpg');
             background-size: cover;
             background-position: center;
         }
@@ -711,7 +715,7 @@
                             <img src="https://flagcdn.com/gb.svg" class="language-flag" alt="English"> English
                         </div>
                         <div class="language-option" onclick="changeLanguage('ar')">
-                            <img src="https://flagcdn.com/ae.svg" class="language-flag" alt="Arabic"> العربية
+                            <img src="images/ae.png" class="language-flag" alt="Arabic"> العربية
                         </div>
                         <div class="language-option" onclick="changeLanguage('hi')">
                             <img src="https://flagcdn.com/in.svg" class="language-flag" alt="Hindi"> हिंदी
@@ -841,7 +845,7 @@
                               data-key="navScholarships">Scholarships</span>
                     </a>
 
-                    <a href="#" id="nav-emiratization" class="nav-item group relative flex items-center space-x-4 p-3 rounded-xl"
+                    <a href="#" class="nav-item group relative flex items-center space-x-4 p-3 rounded-xl"
                        onclick="showPage('emiratization', this)">
                         <div class="w-10 h-10 rounded-lg bg-gradient-to-r from-green-500 to-emerald-400 flex items-center justify-center shadow-lg">
                             <i data-lucide="flag" class="w-5 h-5 text-white"></i>
@@ -1240,72 +1244,7 @@
 
                         <div class="max-w-6xl mx-auto">
                             <div id="universities-container" class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
-                                <!-- Example University Card with Image -->
-                                <div class="glass rounded-2xl card-hover">
-                                    <img src="https://images.unsplash.com/photo-1523050854058-8df9012c9f1c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                                         alt="Khalifa University" 
-                                         class="university-img">
-                                    <div class="p-6">
-                                        <h3 class="text-xl font-bold text-white mb-2">Khalifa University</h3>
-                                        <div class="flex items-center justify-between text-sm text-white/70 mb-2">
-                                            <span class="flex items-center">
-                                                <i data-lucide="map-pin" class="w-4 h-4 mr-1"></i> Abu Dhabi
-                                            </span>
-                                            <span class="px-2 py-1 bg-blue-500/20 text-blue-400 rounded capitalize">public</span>
-                                        </div>
-                                        <p class="text-white/80 mb-4">Leading research university specializing in STEM, ranked among the best in the region.</p>
-                                        <div class="mb-4">
-                                            <h4 class="text-white font-medium mb-2">Popular Programs</h4>
-                                            <div class="flex flex-wrap gap-1">
-                                                <span class="px-2 py-1 bg-white/10 text-white/80 rounded text-xs">Engineering</span>
-                                                <span class="px-2 py-1 bg-white/10 text-white/80 rounded text-xs">Science</span>
-                                                <span class="px-2 py-1 bg-white/10 text-white/80 rounded text-xs">Technology</span>
-                                                <span class="px-2 py-1 bg-white/10 text-white/80 rounded text-xs">Medicine</span>
-                                            </div>
-                                        </div>
-                                        <div class="flex justify-between items-center mt-auto">
-                                            <a href="https://www.ku.ac.ae" target="_blank" class="text-blue-400 hover:text-blue-300 text-sm flex items-center">
-                                                Visit Website <i data-lucide="external-link" class="w-4 h-4 ml-1"></i>
-                                            </a>
-                                            <a href="https://www.ku.ac.ae/admissions/" target="_blank" class="text-purple-400 hover:text-purple-300 text-sm flex items-center ml-2">
-                                                Requirements <i data-lucide="clipboard" class="w-4 h-4 ml-1"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Add more university cards here. Remember to update the JS to dynamically create these too. -->
-                                <!-- Example: American University of Dubai -->
-                                <div class="glass rounded-2xl card-hover">
-                                    <img src="https://images.unsplash.com/photo-1579547610058-202d9193792c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                                         alt="American University of Dubai" 
-                                         class="university-img">
-                                    <div class="p-6">
-                                        <h3 class="text-xl font-bold text-white mb-2">American University of Dubai</h3>
-                                        <div class="flex items-center justify-between text-sm text-white/70 mb-2">
-                                            <span class="flex items-center">
-                                                <i data-lucide="map-pin" class="w-4 h-4 mr-1"></i> Dubai
-                                            </span>
-                                            <span class="px-2 py-1 bg-blue-500/20 text-blue-400 rounded capitalize">private</span>
-                                        </div>
-                                        <p class="text-white/80 mb-4">American-style education in Dubai, accredited in the USA and UAE.</p>
-                                        <div class="mb-4">
-                                            <h4 class="text-white font-medium mb-2">Popular Programs</h4>
-                                            <div class="flex flex-wrap gap-1">
-                                                <span class="px-2 py-1 bg-white/10 text-white/80 rounded text-xs">Business</span>
-                                                <span class="px-2 py-1 bg-white/10 text-white/80 rounded text-xs">Engineering</span>
-                                                <span class="px-2 py-1 bg-white/10 text-white/80 rounded text-xs">Architecture</span>
-                                            </div>
-                                        </div>
-                                        <div class="flex justify-between items-center mt-auto">
-                                            <a href="https://www.aud.edu" target="_blank" class="text-blue-400 hover:text-blue-300 text-sm flex items-center">
-                                                Visit Website <i data-lucide="external-link" class="w-4 h-4 ml-1"></i>
-                                            </a>
-                                            <a href="https://www.aud.edu/admissions/" target="_blank" class="text-purple-400 hover:text-purple-300 text-sm flex items-center ml-2">
-                                                Requirements <i data-lucide="clipboard" class="w-4 h-4 ml-1"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
+                                <!-- University cards will be dynamically generated by JS -->
                             </div>
                         </div>
                     </div>
@@ -1324,7 +1263,7 @@
                                 <!-- Example Career Card with Icon -->
                                 <div class="glass rounded-2xl p-6 card-hover cursor-pointer" onclick="showCareerDetails('Software Engineer')">
                                     <div class="flex flex-col items-center text-center">
-                                        <img src="https://img.icons8.com/fluency/96/000000/code.png" alt="Software Engineer" class="career-icon">
+                                        <img src="images/software.png" alt="Software Engineer" class="career-icon">
                                         <h3 class="text-xl font-bold text-white mb-2">Software Engineer</h3>
                                         <p class="text-white/70 capitalize">Technology</p>
                                     </div>
@@ -1347,7 +1286,7 @@
                                 <!-- Example Career Card: Data Scientist -->
                                 <div class="glass rounded-2xl p-6 card-hover cursor-pointer" onclick="showCareerDetails('Data Scientist')">
                                     <div class="flex flex-col items-center text-center">
-                                        <img src="https://img.icons8.com/fluency/96/000000/bar-chart.png" alt="Data Scientist" class="career-icon">
+                                        <img src="images/software.png" alt="Software Engineer" class="career-icon">
                                         <h3 class="text-xl font-bold text-white mb-2">Data Scientist</h3>
                                         <p class="text-white/70 capitalize">Technology</p>
                                     </div>
@@ -1676,7 +1615,7 @@
                                         Your browser does not support the video tag.
                                     </video>
                                 </div>
-                                <p class="text-white/70 text-sm mt-2 text-center">See our AI Assistant in action.</p>
+                                <p class="text-white/70 text-sm mt-2 text-center">A comprehensive look at the AI Career Guide's features.</p>
                             </div>
 
                             <div class="glass rounded-2xl p-8">
@@ -1695,7 +1634,9 @@
             </div>
         </main>
     </div>
-
+    <footer class="p-4 text-center text-white/60 text-xs fixed bottom-0 w-full glass z-30">
+        © 2025 AI Career Guide - UAE Professional Edition by Sai Pranav, Class 10, IIS.
+    </footer>
     <!-- Toast Notification -->
     <div id="toast" class="toast">
         <div class="flex items-center space-x-3">
@@ -1714,7 +1655,7 @@
             <div id="badge-content" class="text-center">
                 <i data-lucide="trophy" class="w-20 h-20 text-yellow-400 mb-4"></i>
                 <p class="text-xl text-white/90 mb-4">You completed your profile!</p>
-                <button onclick="shareOnLinkedIn()" class="btn-primary bg-gradient-to-r from-blue-500 to-cyan-400 text-white px-6 py-3 rounded-lg">
+                <button onclick="shareOnLinkedIn('profile_complete')" class="btn-primary bg-gradient-to-r from-blue-500 to-cyan-400 text-white px-6 py-3 rounded-lg">
                     <i data-lucide="linkedin" class="w-5 h-5 mr-2"></i> Share on LinkedIn
                 </button>
             </div>
@@ -1983,7 +1924,7 @@
                 appTitle: "اے آئی کیریئر گائیڈ",
                 appSubtitle: "یو اے ای پروفیشنل ایڈیشن",
                 welcomeTitle: "آپ کے اے آئی کیریئر گائیڈ میں خوش آمدید - یو اے ای پروفیشنل ایڈیشن",
-                welcomeSubtitle: "یو اے ای کے طلباء کے لیے تیار کردہ اے آئی سے چلنے والی بصیرت کے ساتھ اپنا بہترین کیریئر کا راستہ دریافت کریں",
+                welcomeSubtitle: "یو اے ای کے طلباء کے لیے تیار کی گئی اے آئی سے چلنے والی بصیرت کے ساتھ اپنا بہترین کیریئر کا راستہ دریافت کریں",
                 aiPowered: "اے آئی سے چلنے والا تجزیہ",
                 uaeCertified: "یو اے ای مصدقہ پروگرامز",
                 multiLingual: "کثیر لسانی",
@@ -2008,21 +1949,21 @@
                 navScholarships: "اسکالرشپس",
                 navEmiratization: "اماراتائزیشن",
                 darkMode: "ڈارک موڈ",
-                profileSetupTitle: "اپنی پروفائل بنائیں",
-                profileSetupSubtitle: "ذاتی نوعیت کی سفارشات کے لیے ہمارے اے آئی کو آپ کو بہتر طور پر سمجھنے میں مدد کریں",
-                basicInfo: "بنیادی معلومات",
-                fullName: "پورا نام",
-                grade: "موجودہ گریڈ",
-                stream: "اسٹریم",
-                academicPerformance: "تعلیمی کارکردگی",
-                interests: "دلچسپی اور مشاغل",
-                careerGoals: "کیریئر کے اہداف",
-                dreamJob: "ڈریم جاب/رول",
-                saveProfile: "پروفائل محفوظ کریں",
-                assessmentTitle: "کیریئر کا جائزہ",
-                assessmentSubtitle: "اے آئی سے چلنے والا شخصیت اور اہلیت کا جائزہ",
-                readyToStart: "کیا آپ اپنا کیریئر کا راستہ تلاش کرنے کے لیے تیار ہیں؟",
-                startAssessment: "جائزہ شروع کریں",
+                profileSetupTitle: "अपनी प्रोफाइल बनाएं",
+                profileSetupSubtitle: "व्यक्तिगत सिफारिशों के लिए हमारे एआई को आपको बेहतर ढंग से समझने में मदद करें",
+                basicInfo: "बुनियादी जानकारी",
+                fullName: "पूरा नाम",
+                grade: "वर्तमान ग्रेड",
+                stream: "स्ट्रीम",
+                academicPerformance: "शैक्षणिक प्रदर्शन",
+                interests: "रुचियां और शौक",
+                careerGoals: "कीरीयर के अहداف",
+                dreamJob: "ड्रीएम जोब/रोल",
+                saveProfile: "प्रोफाइल सहेजें",
+                assessmentTitle: "कीरीयर मूल्याँकन",
+                assessmentSubtitle: "एआई-संचालित व्यक्तित्व और योग्यता मूल्यांकन",
+                readyToStart: "क्या आप अपना करियर पथ खोजने के लिए तैयार हैं?",
+                startAssessment: "मूल्यांकन शुरू करें",
             },
             bn: {
                 // Bengali
@@ -2239,7 +2180,6 @@
                 "विज्ञान", "खेल", "स्वास्थ्य", "यात्रा", "खाना बनाना", "गेमिंग"
             ],
             ta: [
-                // Tamil
                 "தொழில்நுட்பம்", "நிரலாக்கம்", "செயற்கை நுண்ணறிவு", "சைபர் பாதுகாப்பு", "தரவு அறிவியல்",
                 "மருத்துவம்", "நர்சிங்", "உளவியல்", "பொது சுகாதாரம்", "பார்மசி",
                 "பொறியியல்", "கட்டிடக்கலை", "கட்டுமான", "உற்பத்தி", "வாகன",
@@ -2249,7 +2189,6 @@
                 "அறிவியல்", "விளையாட்டு", "உடற்தகுதி", "பயணம்", "சமையல்", "கேமிங்"
             ],
             ml: [
-                // Malayalam
                 "സാങ്കേതികവിദ്യ", "പ്രോഗ്രാമിംഗ്", "കൃത്രിമ ബുദ്ധി", "സൈബർ സുരക്ഷ", "ഡാറ്റാ സയൻസ്",
                 "ചികിത്സ", "നഴ്സിംഗ്", "മനശാസ്ത്രം", "പൊതുജനാരോഗ്യം", "ഫാർമസി",
                 "എഞ്ചിനീയറിംഗ്", "വാസ്തുവിദ്യ", "നിർമ്മാണം", "ഉൽപ്പാദനം", "ഓട്ടോമോട്ടീവ്",
@@ -2259,7 +2198,6 @@
                 "ശാസ്ത്രം", "കായികം", "ഫിറ്റ്നസ്", "യാത്ര", "പാചകം", "ഗെയിമിംഗ്"
             ],
             ur: [
-                // Urdu
                 "ٹیکنالوجی", "پروگرامنگ", "مصنوعی ذہانت", "سائبر سیکیورٹی", "ڈیٹا سائنس",
                 "میڈیسن", "نرسنگ", "نفسیات", "عوامی صحت", "فارماسی",
                 "انجینئرنگ", "آرکیٹیکچر", "تعمیر", "مینوفیکچرنگ", "آٹوموٹیو",
@@ -2269,7 +2207,6 @@
                 "سائنس", "کھیل", "فٹنس", "سفر", "کھانا پکانا", "گیمنگ"
             ],
             bn: [
-                // Bengali
                 "প্রযুক্তি", "প্রোগ্রামিং", "কৃত্রিম বুদ্ধিমত্তা", "সাইবার নিরাপত্তা", "ডেটা বিজ্ঞান",
                 "চিকিৎসা", "নার্সিং", "মনোবিজ্ঞান", "জনস্বাস্থ্য", "ফার্মেসি",
                 "ইঞ্জিনিয়ারিং", "আর্কিটেকচার", "নির্মাণ", "উৎপাদন", "স্বয়ংচালিত",
@@ -2279,7 +2216,6 @@
                 "বিজ্ঞান", "খেলাধুলা", "ফিটনেস", "ভ্রমণ", "রান্না", "গেমিং"
             ],
             fa: [
-                // Persian
                 "فناوری", "برنامه‌نویسی", "هوش مصنوعی", "امنیت سایبری", "علم داده",
                 "پزشکی", "پرستاری", "روانشناسی", "بهداشت عمومی", "داروسازی",
                 "مهندسی", "معماری", "ساخت و ساز", "تولید", "خودرو",
@@ -2289,7 +2225,6 @@
                 "علوم", "ورزش", "تناسب اندام", "سفر", "آشپزی", "بازی"
             ],
             ps: [
-                // Pashto
                 "ټکنالوژي", "پروګرامینګ", "مصنوعي هوښیارتیا", "سایبر امنیت", "د معلوماتو علم",
                 "طب", "نرسینګ", "رواني پوهنه", "عامې روغتیا", "فارماسي",
                 "انجینري", "معماري", "ساختماني", "تولید", "موټر",
@@ -2299,7 +2234,6 @@
                 "ساینس", "ورزش", "فټنس", "سفر", "پخلی", "لوبې"
             ],
             tl: [
-                // Tagalog
                 "Teknolohiya", "Programming", "Artificial Intelligence", "Cybersecurity", "Data Science",
                 "Medisina", "Nursing", "Psychology", "Pampublikong Kalusugan", "Pharmacy",
                 "Engineering", "Arkitektura", "Konstruksyon", "Manufacturing", "Automotive",
@@ -2322,7 +2256,7 @@
                 description: "UAE's flagship university established in 1976.",
                 website: "https://www.uaeu.ac.ae",
                 requirementsLink: "https://www.uaeu.ac.ae/en/admission/undergraduate.shtml",
-                imageUrl: "https://images.unsplash.com/photo-1523050854058-8df9012c9f1c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                imageUrl: "./images/uaeu.jpg" // Updated path
             },
             {
                 name: "American University of Dubai",
@@ -2333,7 +2267,7 @@
                 description: "American-style education in Dubai, accredited in the USA and UAE.",
                 website: "https://www.aud.edu",
                 requirementsLink: "https://www.aud.edu/admissions/",
-                imageUrl: "https://images.unsplash.com/photo-1579547610058-202d9193792c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                imageUrl: "./images/american_university_dubai.png" // Updated path
             },
             {
                 name: "Khalifa University",
@@ -2344,7 +2278,7 @@
                 description: "Leading research university specializing in STEM, ranked among the best in the region.",
                 website: "https://www.ku.ac.ae",
                 requirementsLink: "https://www.ku.ac.ae/admissions/",
-                imageUrl: "https://images.unsplash.com/photo-1523050854058-8df9012c9f1c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                imageUrl: "./images/khalifa_university.jpg" // Updated path
             },
             {
                 name: "American University of Sharjah",
@@ -2355,7 +2289,7 @@
                 description: "A premier American liberal arts university located in University City, Sharjah.",
                 website: "https://www.aus.edu",
                 requirementsLink: "https://www.aus.edu/admissions",
-                imageUrl: "https://images.unsplash.com/photo-1596496053351-41d11a6d7f02?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                imageUrl: "./images/american_university_sharjah.jpg" // Updated path
             },
             {
                 name: "University of Dubai",
@@ -2366,7 +2300,7 @@
                 description: "The first private university in Dubai, known for its business and IT programs.",
                 website: "https://www.ud.ac.ae",
                 requirementsLink: "https://www.ud.ac.ae/admissions/",
-                imageUrl: "https://images.unsplash.com/photo-1579547610058-202d9193792c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                imageUrl: "./images/university_of_dubai.jpg" // Example: Add this image
             },
             {
                 name: "Zayed University",
@@ -2377,7 +2311,7 @@
                 description: "A national university for Emirati men and women, focusing on global education and national development.",
                 website: "https://www.zu.ac.ae",
                 requirementsLink: "https://www.zu.ac.ae/main/en/admission/admission-requirements",
-                imageUrl: "https://images.unsplash.com/photo-1523050854058-8df9012c9f1c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                imageUrl: "./images/zayed_university.jpg" // Example: Add this image
             },
             {
                 name: "Higher Colleges of Technology",
@@ -2388,7 +2322,7 @@
                 description: "The largest higher education institution in the UAE, providing applied, career-focused programs.",
                 website: "https://www.hct.ac.ae",
                 requirementsLink: "https://www.hct.ac.ae/en/admissions/",
-                imageUrl: "https://images.unsplash.com/photo-1523050854058-8df9012c9f1c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                imageUrl: "./images/higher_colleges_of_technology.jpg" // Example: Add this image
             },
             {
                 name: "British University in Dubai",
@@ -2399,7 +2333,7 @@
                 description: "A research-based university offering British curriculum programs in Dubai.",
                 website: "https://www.buid.ac.ae",
                 requirementsLink: "https://www.buid.ac.ae/admissions/",
-                imageUrl: "https://images.unsplash.com/photo-1579547610058-202d9193792c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                imageUrl: "./images/british_university_dubai.jpg" // Example: Add this image
             },
             {
                 name: "New York University Abu Dhabi",
@@ -2410,7 +2344,7 @@
                 description: "A comprehensive liberal arts and research university in the global NYU network.",
                 website: "https://nyuad.nyu.edu",
                 requirementsLink: "https://nyuad.nyu.edu/en/admissions/undergraduate.html",
-                imageUrl: "https://images.unsplash.com/photo-1523050854058-8df9012c9f1c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                imageUrl: "./images/nyu_abu_dhabi.jpg" // Example: Add this image
             },
             {
                 name: "Sorbonne University Abu Dhabi",
@@ -2421,7 +2355,7 @@
                 description: "A French-speaking university that upholds the academic excellence of Sorbonne University in Paris.",
                 website: "https://www.sorbonne.ae",
                 requirementsLink: "https://www.sorbonne.ae/admissions/",
-                imageUrl: "https://images.unsplash.com/photo-1523050854058-8df9012c9f1c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                imageUrl: "./images/sorbonne_university_abu_dhabi.jpg" // Example: Add this image
             },
             {
                 name: "Rochester Institute of Technology Dubai (RIT Dubai)",
@@ -2432,7 +2366,7 @@
                 description: "A leading American university offering programs in technology, business, and computing.",
                 website: "https://www.rit.edu/dubai/",
                 requirementsLink: "https://www.rit.edu/dubai/admissions",
-                imageUrl: "https://images.unsplash.com/photo-1579547610058-202d9193792c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                imageUrl: "./images/rit_dubai.jpg" // Example: Add this image
             },
             {
                 name: "Mohammed Bin Rashid School of Government",
@@ -2443,7 +2377,7 @@
                 description: "A research and teaching institution focusing on public policy and administration.",
                 website: "https://www.mbrsg.ae",
                 requirementsLink: "https://www.mbrsg.ae/admissions",
-                imageUrl: "https://images.unsplash.com/photo-1579547610058-202d9193792c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                imageUrl: "./images/mbrsg.jpg" // Example: Add this image
             },
             {
                 name: "Gulf Medical University",
@@ -2454,7 +2388,7 @@
                 description: "A leading medical university in the UAE, offering a wide range of health sciences programs.",
                 website: "https://www.gmu.ac.ae",
                 requirementsLink: "https://www.gmu.ac.ae/admissions",
-                imageUrl: "https://images.unsplash.com/photo-1523050854058-8df9012c9f1c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                imageUrl: "./images/gulf_medical_university.jpg" // Example: Add this image
             },
             {
                 name: "Ajman University",
@@ -2465,7 +2399,7 @@
                 description: "One of the first private universities in the UAE, known for its diverse programs.",
                 website: "https://www.ajman.ac.ae",
                 requirementsLink: "https://www.ajman.ac.ae/en/admissions/admission-requirements",
-                imageUrl: "https://images.unsplash.com/photo-1579547610058-202d9193792c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                imageUrl: "./images/ajman_university.jpg" // Example: Add this image
             },
             {
                 name: "American University of Ras Al Khaimah (AURAK)",
@@ -2476,7 +2410,7 @@
                 description: "An independent, public, non-profit, co-educational institution of higher education.",
                 website: "https://www.aurak.ac.ae",
                 requirementsLink: "https://www.aurak.ac.ae/en/admissions",
-                imageUrl: "https://images.unsplash.com/photo-1523050854058-8df9012c9f1c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                imageUrl: "./images/aurak.jpg" // Example: Add this image
             },
             {
                 name: "Mohamed bin Zayed University of Artificial Intelligence (MBZUAI)",
@@ -2487,7 +2421,7 @@
                 description: "The world's first graduate-level, research-based AI university.",
                 website: "https://mbzuai.ac.ae",
                 requirementsLink: "https://mbzuai.ac.ae/admissions/admission-requirements/",
-                imageUrl: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+                imageUrl: "./images/mbzuai.jpg" // Updated path
             },
             {
                 name: "University of Sharjah",
@@ -2498,7 +2432,7 @@
                 description: "A comprehensive university offering a wide range of programs across various disciplines.",
                 website: "https://www.sharjah.ac.ae",
                 requirementsLink: "https://www.sharjah.ac.ae/en/Admissions/Pages/default.aspx",
-                imageUrl: "https://images.unsplash.com/photo-1596496053351-41d11a6d7f02?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                imageUrl: "./images/university_of_sharjah.jpg" // Example: Add this image
             },
             {
                 name: "Skyline University College",
@@ -2509,7 +2443,7 @@
                 description: "Offers undergraduate and postgraduate programs focusing on business and IT.",
                 website: "https://www.skylineuniversity.ac.ae",
                 requirementsLink: "https://www.skylineuniversity.ac.ae/admissions",
-                imageUrl: "https://images.unsplash.com/photo-1596496053351-41d11a6d7f02?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                imageUrl: "./images/skyline_university_college.jpg" // Example: Add this image
             },
             {
                 name: "Manipal Academy of Higher Education, Dubai",
@@ -2520,7 +2454,7 @@
                 description: "An international branch campus offering diverse undergraduate and postgraduate programs.",
                 website: "https://www.manipaldubai.com",
                 requirementsLink: "https://www.manipaldubai.com/admissions/",
-                imageUrl: "https://images.unsplash.com/photo-1579547610058-202d9193792c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                imageUrl: "./images/manipal_academy_dubai.jpg" // Example: Add this image
             },
             {
                 name: "Amity University Dubai",
@@ -2531,7 +2465,7 @@
                 description: "Part of a leading global education group, offering a wide array of programs.",
                 website: "https://www.amityuniversity.ae",
                 requirementsLink: "https://www.amityuniversity.ae/admissions/",
-                imageUrl: "https://images.unsplash.com/photo-1579547610058-202d9193792c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                imageUrl: "./images/amity_university_dubai.jpg" // Example: Add this image
             },
             {
                 name: "Canadian University Dubai",
@@ -2542,7 +2476,7 @@
                 description: "Offers Canadian-based curriculum in Dubai, accredited by the UAE Ministry of Education.",
                 website: "https://www.cud.ac.ae",
                 requirementsLink: "https://www.cud.ac.ae/admissions/admissions-requirements",
-                imageUrl: "https://images.unsplash.com/photo-1579547610058-202d9193792c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                imageUrl: "./images/canadian_university_dubai.jpg" // Example: Add this image
             },
             {
                 name: "Middlesex University Dubai",
@@ -2553,7 +2487,7 @@
                 description: "The first overseas campus of the Middlesex University in London, offering UK degrees.",
                 website: "https://www.mdx.ac.ae",
                 requirementsLink: "https://www.mdx.ac.ae/admissions/",
-                imageUrl: "https://images.unsplash.com/photo-1579547610058-202d9193792c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                imageUrl: "./images/middlesex_university_dubai.jpg" // Example: Add this image
             },
             {
                 name: "Heriot-Watt University Dubai",
@@ -2564,7 +2498,7 @@
                 description: "A branch campus of the renowned UK university, offering a range of undergraduate and postgraduate programs.",
                 website: "https://www.hw.ac.uk/dubai/",
                 requirementsLink: "https://www.hw.ac.uk/dubai/study/admissions/",
-                imageUrl: "https://images.unsplash.com/photo-1579547610058-202d9193792c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                imageUrl: "./images/heriot_watt_university_dubai.jpg" // Example: Add this image
             },
             {
                 name: "BITS Pilani, Dubai Campus",
@@ -2575,7 +2509,7 @@
                 description: "An international branch of the Birla Institute of Technology and Science, Pilani, India, focusing on engineering and technology.",
                 website: "https://www.bits-pilani.ac.in/dubai/",
                 requirementsLink: "https://www.bits-pilani.ac.in/dubai/admissions/",
-                imageUrl: "https://images.unsplash.com/photo-1579547610058-202d9193792c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                imageUrl: "./images/bits_pilani_dubai.jpg" // Example: Add this image
             },
             {
                 name: "SP Jain School of Global Management, Dubai",
@@ -2586,7 +2520,7 @@
                 description: "A global business school with campuses in Dubai, Mumbai, Singapore, and Sydney.",
                 website: "https://www.spjain.org/campuses/dubai",
                 requirementsLink: "https://www.spjain.org/admissions",
-                imageUrl: "https://images.unsplash.com/photo-1579547610058-202d9193792c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                imageUrl: "./images/sp_jain_dubai.jpg" // Example: Add this image
             }
         ];
         // Career recommendations data
@@ -2664,7 +2598,7 @@
                 demandLevel: "High",
                 suggestedUniversities: ["United Arab Emirates University", "American University of Sharjah", "Khalifa University"],
                 jobOutcomes: "Structural Engineer, Construction Manager, Urban Planner, Water Resources Engineer",
-                iconUrl: "https://img.icons8.com/fluency/96/000000/engineer.png" // Placeholder icon
+                iconUrl: "./images/engineer.png" // Placeholder icon
             },
             {
                 title: "Investment Banker",
@@ -2694,7 +2628,7 @@
                 demandLevel: "High",
                 suggestedUniversities: ["American University of Dubai", "University of Sharjah", "Middlesex University Dubai"],
                 jobOutcomes: "Social Media Manager, SEO Specialist, Content Marketing Specialist, Email Marketing Manager",
-                iconUrl: "https://img.icons8.com/fluency/96/000000/digital-marketing.png" // Placeholder icon
+                iconUrl: "./images/digital-marketing.png" // Placeholder icon
             },
             {
                 title: "Architect",
@@ -3323,7 +3257,7 @@
                 },
                 options: {
                     responsive: true,
-                    maintainAspectRatio: false,
+                    maintainAspectRatio: true,
                     indexAxis: 'y', // Make it a horizontal bar chart to simulate timeline
                     plugins: {
                         legend: {
